@@ -20,84 +20,36 @@
             <span class="logo-fc">COPA EA FC 26</span>
         </div>
         <div class="header-right">
-            <a href="#" class="btn-fc btn-header" id="btn-header-inscricao">INSCREVA-SE</a>
+            <!-- Botão reservado -->
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION REFORMULADA -->
     <header class="fc-hero" id="hero-section">
-        <div class="hero-overlay"></div>
         
-        <div class="hero-content">
-            <div class="title-group">
-                <h4>ENTEC UNINASSAU 2026</h4>
-                <h1>COPA EA FC 26<br>DUPLAS CO-OP</h1>
-                <p class="hero-date">UNINASSAU Campina Grande | 24 de Setembro de 2026</p>
+        <!-- DESTAQUE DIREITO (Bandeira e Jogador de Corpo Todo) -->
+        <div class="spotlight-showcase">
+            <div class="flag-wrapper">
+                <img src="" id="spotlight-flag" class="spotlight-flag" alt="" onerror="this.style.opacity=0">
+                <div class="flag-gradient"></div>
             </div>
+            <img src="" id="spotlight-render" class="spotlight-render" alt="" onerror="this.style.opacity=0">
+        </div>
+
+        <!-- CONTEÚDO ESQUERDA/CENTRO (Títulos) -->
+        <div class="hero-info">
+            <h4>ENTEC UNINASSAU 2026</h4>
+            <h1>COPA EA FC 26<br>DUPLAS CO-OP</h1>
+            <p class="hero-date">UNINASSAU Campina Grande | 24 de Setembro de 2026</p>
             <a href="#" class="btn-fc" id="btn-inscricao">GARANTA SUA VAGA</a>
-
-            <!-- DRAFT DE CARTAS (CO-OP) -->
-            <div class="draft-showcase">
-                <div class="team-draft left-team">
-                    <div class="ut-card" id="p1-card-1"><div class="card-inner"><div class="card-front"></div><div class="card-back">Vini Jr.</div></div></div>
-                    <div class="ut-card" id="p1-card-2"><div class="card-inner"><div class="card-front"></div><div class="card-back">Bellingham</div></div></div>
-                </div>
-                <div class="vs-badge">VS</div>
-                <div class="team-draft right-team">
-                    <div class="ut-card" id="p2-card-1"><div class="card-inner"><div class="card-front"></div><div class="card-back">Haaland</div></div></div>
-                    <div class="ut-card" id="p2-card-2"><div class="card-inner"><div class="card-front"></div><div class="card-back">De Bruyne</div></div></div>
-                </div>
-            </div>
         </div>
+
+        <!-- CARROSSEL DE CARTAS (Esteira) -->
+        <div class="cards-track" id="cards-track">
+            <!-- As cartas serão injetadas e animadas pelo JavaScript aqui -->
+        </div>
+
     </header>
-
-    <!-- INFORMAÇÕES E REGRAS -->
-    <section class="regras fc-theme">
-        <div class="container">
-            <h2>Regulamento & Inscrições</h2>
-            <div class="grid-regras">
-                <div class="card fc-card glass-panel">
-                    <div class="card-text">
-                        <h3>Fase Aberta</h3>
-                        <p>Público Geral</p>
-                        <p class="horario">Início: 16h00</p>
-                        <p class="taxa">Taxa: R$ 10,00</p>
-                    </div>
-                </div>
-                <div class="card fc-card glass-panel">
-                    <div class="card-text">
-                        <h3>Fase Universitária</h3>
-                        <p>Alunos UNINASSAU</p>
-                        <p class="horario">Início: 18h30</p>
-                        <p class="taxa">Taxa: R$ 5,00</p>
-                    </div>
-                </div>
-                <div class="card fc-card glass-panel">
-                    <div class="card-text">
-                        <h3>Formato</h3>
-                        <p>2v2 (Co-op Seasons)</p>
-                        <p class="horario">Eliminatória Simples</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BRACKET SIMULATOR -->
-    <section class="bracket-section" id="chaveamento">
-        <div class="container">
-            <h2 class="arena-title">Road to the Final: Chaveamento</h2>
-            <div class="arena-display glass-panel fc-bracket">
-                <div class="match-label" id="round-label">QUARTAS DE FINAL</div>
-                <div class="bracket-ui" id="bracket-ui">
-                    <div class="fc-match-box" id="match-1">
-                        <div class="team-row t1">Dupla A <span class="score">-</span></div>
-                        <div class="team-row t2">Dupla B <span class="score">-</span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <script src="script.js"></script>
 </body>
