@@ -218,3 +218,134 @@ h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 1px; }
 .team-row.loser { opacity: 0.4; filter: grayscale(100%); }
 .score { font-weight: bold; background: rgba(255,255,255,0.1); padding: 2px 8px; border-radius: 4px; }
 .team-row.winner .score { background: var(--fc-green); color: #000; }
+/* =========================================
+   MEDIA QUERIES (RESPONSIVIDADE MOBILE)
+========================================= */
+@media (max-width: 768px) {
+    /* 1. Ajustes do Header */
+    .sticky-header {
+        padding: 0 15px;
+        height: 60px;
+        justify-content: center; /* Centraliza o conteúdo se ocultar as laterais */
+    }
+
+    .header-left, .header-right {
+        display: none; /* Oculta as logos laterais e o botão no topo para focar no evento */
+    }
+
+    .header-fc-logo {
+        height: 25px; /* Reduz a logo central */
+    }
+
+    /* 2. Ajustes da Seção Hero */
+    .fc-hero {
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        padding: 80px 20px 40px;
+        background-position: top center; /* Ajusta o foco da imagem de fundo */
+    }
+
+    .hero-overlay {
+        /* Gradiente vertical para telas estreitas: escuro em cima e no meio, leve embaixo */
+        background: linear-gradient(180deg, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0.85) 50%, rgba(5,5,5,0.4) 100%);
+    }
+
+    .hero-content-left {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 0;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .hero-nassau-logo {
+        height: 40px; /* Um pouco maior no mobile para dar destaque */
+        margin: 0 auto 15px;
+    }
+
+    .title-group h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* 3. Simplificação Visual: Oculta animações pesadas e elementos decorativos no mobile */
+    .hero-bg-render {
+        display: none; /* Remove a imagem do jogador de corpo inteiro */
+    }
+
+    .card-track-container {
+        position: relative; /* Remove o posicionamento absoluto */
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        height: 200px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center; /* Centraliza a carta no mobile */
+    }
+
+    .card-track {
+        justify-content: center;
+    }
+
+    /* Oculta toda a esteira giratória exceto a carta ativa (em destaque) */
+    .track-slot {
+        display: none;
+    }
+
+    .track-slot.active-card {
+        display: block; /* Mantém apenas a carta principal visível */
+        margin-left: 0;
+        transform: none; /* Remove elevações */
+    }
+
+    .track-slot.active-card .card-3d-inner {
+        /* Remove o flip contínuo no mobile para melhorar a performance e foco */
+        transform: rotateY(180deg) !important; 
+        transition: none; /* Desativa a transição do flip */
+    }
+
+    /* 4. Ajustes das Seções de Conteúdo */
+    .sobre {
+        padding: 50px 20px;
+    }
+
+    .sobre h2 {
+        font-size: 2rem;
+    }
+
+    .sobre p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding: 40px 15px;
+    }
+
+    .grid-regras {
+        grid-template-columns: 1fr; /* Força os cards a empilharem 1 por linha */
+        gap: 15px;
+    }
+
+    .fc-card {
+        padding: 20px;
+    }
+
+    .arena-guide-text {
+        padding: 20px !important;
+    }
+
+    .arena-guide-text h3 {
+        font-size: 1.5rem !important;
+    }
+
+    .kombat-rules-list li {
+        font-size: 1rem !important;
+    }
+}
