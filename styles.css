@@ -13,6 +13,30 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* 1. Controlar o tamanho da logo da Uninassau no Hero */
+.hero-nassau-logo {
+    height: 30px; /* Força uma altura máxima controlada */
+    width: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
+    display: block;
+}
+
+/* 2. Impedir que a esteira de cartas invada o lado direito */
+.card-track-container {
+    position: absolute; 
+    bottom: 40px; 
+    left: 60px; 
+    width: 45%; /* Reduzido de calc(100% - 60px) para 45%. Assim a esteira morre no meio da tela */
+    height: 220px; 
+    z-index: 10;
+}
+
+/* 3. (Opcional) Aumentar um pouquinho a logo do ENTEC no header para leitura melhor */
+.entec-logo { 
+    height: 24px; 
+}
+
 body {
     background-color: var(--fc-bg);
     color: #fff;
