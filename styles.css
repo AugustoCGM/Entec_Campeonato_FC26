@@ -274,41 +274,13 @@ h1, h2, h3, h4 { text-transform: uppercase; letter-spacing: 1px; }
         margin-bottom: 20px;
     }
 
-    /* 3. Simplificação Visual: Oculta animações pesadas e elementos decorativos no mobile */
+    /* 3. Simplificação Visual: Oculta a esteira de cartas no mobile */
     .hero-bg-render {
         display: none; /* Remove a imagem do jogador de corpo inteiro */
     }
 
     .card-track-container {
-        position: relative; /* Remove o posicionamento absoluto */
-        bottom: auto;
-        left: auto;
-        width: 100%;
-        height: 200px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: center; /* Centraliza a carta no mobile */
-    }
-
-    .card-track {
-        justify-content: center;
-    }
-
-    /* Oculta toda a esteira giratória exceto a carta ativa (em destaque) */
-    .track-slot {
-        display: none;
-    }
-
-    .track-slot.active-card {
-        display: block; /* Mantém apenas a carta principal visível */
-        margin-left: 0;
-        transform: none; /* Remove elevações */
-    }
-
-    .track-slot.active-card .card-3d-inner {
-        /* Remove o flip contínuo no mobile para melhorar a performance e foco */
-        transform: rotateY(180deg) !important; 
-        transition: none; /* Desativa a transição do flip */
+        display: none; /* Oculta totalmente a esteira de cartas no telemóvel */
     }
 
     /* 4. Ajustes das Seções de Conteúdo */

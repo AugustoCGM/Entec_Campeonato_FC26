@@ -80,6 +80,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (currentSlots[lastIndex]) {
             currentSlots[lastIndex].classList.add('active-card');
+            
+            // Força a reinicialização da animação no mobile removendo e readicionando o elemento
+            if (window.innerWidth <= 768) {
+                const innerCard = currentSlots[lastIndex].querySelector('.card-3d-inner');
+                if (innerCard) {
+                    innerCard.style.animation = 'none';
+                    void innerCard.offsetWidth; // Trigger reflow
+                    innerCard.style.animation = 'mobileFlipIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                }
+            }
+            
             updateBackground(currentSlots[lastIndex].dataset.render);
         }
 
